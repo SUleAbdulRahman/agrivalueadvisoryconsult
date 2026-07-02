@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '{ print NR, length\\($0\\) }' \"INDEX.html\")",
+      "Bash(sort -k2 -n -r)",
+      "Bash(awk 'NR>=595 && NR<=670 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE, \"length\\($0\\)\" chars] \"substr\\($0,1,200\\)\"...\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk -F: '{ if \\(length\\($0\\) > 300\\) print substr\\($0,1,300\\)\"...\"; else print }')",
+      "Bash(awk 'NR>=805 && NR<=875 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE, \"length\\($0\\)\" chars] \"substr\\($0,1,150\\)\"...\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk 'NR>=280 && NR<=335 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk 'NR>=1 && NR<=60 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk 'NR>=335 && NR<=385 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk 'NR>=875 && NR<=954 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(command -v magick)",
+      "Bash(command -v convert)",
+      "Bash(command -v cwebp)",
+      "Bash(command -v ffmpeg)",
+      "Bash(command -v identify)",
+      "Bash(command -v npx)",
+      "Bash(command -v node)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "Bash(awk 'NR>=210 && NR<=235 { print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk '{ if \\(length\\($0\\) > 2000\\) print NR\": \"length\\($0\\) }' \"INDEX.html\")",
+      "Bash(awk 'NR>=339 && NR<=420 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk 'NR>=195 && NR<=214 { print NR\": \"$0 }' \"INDEX.html\")"
+    ]
+  }
+}
