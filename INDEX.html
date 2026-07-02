@@ -26,13 +26,13 @@ a{text-decoration:none;color:inherit}
 nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 6%;display:flex;justify-content:space-between;align-items:center;height:70px;position:sticky;top:0;z-index:200;transition:box-shadow .3s}
 nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom-color:transparent}
 .nav-left{display:flex;align-items:center}
-.nav-brand{display:flex;align-items:center;gap:9px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:var(--green);letter-spacing:-.01em}
+.nav-brand{display:flex;align-items:center;gap:9px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;color:var(--green);letter-spacing:-.01em;white-space:nowrap}
 .nav-brand span{color:var(--gold)}
-.nav-logo{height:38px;width:auto;display:block}
+.nav-logo{height:38px;width:auto;display:block;flex-shrink:0}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:13px;font-weight:600;color:var(--grey);transition:color .2s}
 .nav-links a:hover{color:var(--green)}
-.nav-cta{background:var(--green);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:background .2s}
+.nav-cta{background:var(--green);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:background .2s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:var(--green-dark)!important}
 .nav-proposal{border:1.5px solid var(--green);color:#000!important;padding:8px 18px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:.2s;cursor:pointer;background:transparent}
 .nav-proposal:hover{background:var(--green-tint)!important}
@@ -237,6 +237,13 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   footer{flex-direction:column;text-align:center}
   .form-row{grid-template-columns:1fr}
   .contact-channels{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  nav{padding:0 4%}
+  .nav-brand{font-size:12px;gap:6px}
+  .nav-brand span{display:none}
+  .nav-logo{height:30px}
+  .nav-cta{padding:7px 12px;font-size:11px;gap:5px}
 }
 </style>
 </head>
@@ -485,13 +492,13 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
       <div class="founder-name">Sule Abdul Rahman</div>
       <div class="founder-title">Founder &amp; Principal Consultant</div>
       <p class="founder-bio">Sule didn't study agriculture from a classroom — he grew up on a farm. Raised in Bando, near Elmina, he lost his father at an early age and faced financial hardship so severe he burned charcoal to fund his own education. Instead of yielding, he turned every setback into fuel. He studied agriculture formally at secondary and college level, completed his national service with CSIR-SARI in Nyankpala, then spent 7 years as a Technical Field Specialist with Masara N'Arziki Farmers Association, followed by 3 years as a Commercial Business Partner Coordinator with Agricultural Labour Services Agency (ALSA) — not as an observer, but as someone doing the work.</p>
-      <p class="founder-bio" style="margin-top:14px">That field experience grew into something sharper. As a <strong style="color:var(--charcoal)">Certified Business Analyst</strong>, Sule moved into the systems and strategy side of agriculture — training technical staff and frontline teams for organisations including <strong style="color:var(--charcoal)">Babator Farming Company</strong>, building operational capacity where it was needed most. AgriValue Advisory Consult is the direct product of that journey: two decades of agriculture, business analysis, and people development, combined into one focused consulting practice.</p>
+      <p class="founder-bio" style="margin-top:14px">That field experience grew into something sharper. Armed with a <strong style="color:var(--charcoal)">Bachelor of Business Administration</strong> from Valley View University and certification as a <strong style="color:var(--charcoal)">Certified Business Analyst</strong>, Sule moved into the systems and strategy side of agriculture — training technical staff and frontline teams for organisations including <strong style="color:var(--charcoal)">Babator Farming Company</strong>, building operational capacity where it was needed most. AgriValue Advisory Consult is the direct product of that journey: two decades of agriculture, business analysis, and people development, combined into one focused consulting practice.</p>
     </div>
     <div class="credentials-block">
       <h4>Qualifications &amp; Certifications</h4>
       <div class="cred-list">
         <div class="cred-item"><div class="cred-icon"><i class="ti ti-rosette"></i></div><div class="cred-text"><strong>Certified Business Analyst</strong><span>Professional certification in business analysis practice</span></div></div>
-        <div class="cred-item"><div class="cred-icon"><i class="ti ti-school"></i></div><div class="cred-text"><strong>BBA — Human Resource Management</strong><span>Valley View University, Ghana</span></div></div>
+        <div class="cred-item"><div class="cred-icon"><i class="ti ti-school"></i></div><div class="cred-text"><strong>Bachelor of Business Administration (BBA)</strong><span>Human Resource Management — Valley View University, Ghana</span></div></div>
         <div class="cred-item"><div class="cred-icon"><i class="ti ti-certificate"></i></div><div class="cred-text"><strong>Data &amp; Analytics Certification</strong><span>10alytics</span></div></div>
         <div class="cred-item"><div class="cred-icon"><i class="ti ti-award"></i></div><div class="cred-text"><strong>Professional IT Certification</strong><span>BCS — The Chartered Institute for IT</span></div></div>
         <div class="cred-item"><div class="cred-icon"><i class="ti ti-plant"></i></div><div class="cred-text"><strong>Agriculture — Secondary &amp; College Level</strong><span>General Agriculture — foundational field training</span></div></div>

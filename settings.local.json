@@ -24,7 +24,8 @@
       "Bash(awk 'NR>=210 && NR<=235 { print NR\": \"$0 }' \"INDEX.html\")",
       "Bash(awk '{ if \\(length\\($0\\) > 2000\\) print NR\": \"length\\($0\\) }' \"INDEX.html\")",
       "Bash(awk 'NR>=339 && NR<=420 { if \\(length\\($0\\) > 500\\) print NR\": [LONG LINE]\"; else print NR\": \"$0 }' \"INDEX.html\")",
-      "Bash(awk 'NR>=195 && NR<=214 { print NR\": \"$0 }' \"INDEX.html\")"
+      "Bash(awk 'NR>=195 && NR<=214 { print NR\": \"$0 }' \"INDEX.html\")",
+      "Bash(awk '{ if \\(length\\($0\\) > 2000\\) print NR }' \"INDEX.html\")"
     ]
   }
 }
