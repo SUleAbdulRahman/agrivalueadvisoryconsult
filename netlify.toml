@@ -1,0 +1,14 @@
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=UTF-8"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[redirects]]
+  from = "/insights/usaid-feed-the-future-ghana-grant-guide"
+  to = "/insights/usaid-feed-the-future-ghana-grant-guide/index.html"
+  status = 200
