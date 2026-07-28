@@ -53,12 +53,18 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom-color:transpare
 .modal-close:hover{color:var(--charcoal)}
 .modal-box h3{font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:var(--green);margin-bottom:6px}
 .modal-box p{font-size:13.5px;color:var(--grey);margin-bottom:24px}
+.founder-modal-box{max-width:900px;max-height:88vh;overflow-y:auto}
+.founder-section.founder-modal-box{padding:44px 6% 40px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
 .form-group label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--charcoal);letter-spacing:.05em;text-transform:uppercase}
-.form-group input,.form-group textarea{border:1.5px solid var(--border);border-radius:var(--radius);padding:11px 14px;font-family:'Open Sans',sans-serif;font-size:14px;color:var(--charcoal);outline:none;transition:border-color .2s;background:var(--cream)}
-.form-group input:focus,.form-group textarea:focus{border-color:var(--green);background:var(--white)}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:var(--radius);padding:11px 14px;font-family:'Open Sans',sans-serif;font-size:14px;color:var(--charcoal);outline:none;transition:border-color .2s;background:var(--cream)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green);background:var(--white)}
 .form-group textarea{resize:vertical;min-height:110px}
+.form-group select{cursor:pointer}
+.form-group.field-error input,.form-group.field-error select,.form-group.field-error textarea{border-color:#c0392b;background:#fdf1f0}
+.field-error-msg{font-size:12px;color:#c0392b;display:none}
+.form-group.field-error .field-error-msg{display:block}
 .form-submit{width:100%;background:var(--green);color:var(--white);border:none;padding:13px;border-radius:var(--radius);font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;cursor:pointer;transition:background .2s;margin-top:4px}
 .form-submit:hover{background:var(--green-dark)}
 .form-success{text-align:center;padding:20px 0;display:none}
@@ -259,12 +265,43 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <p>Tell us about your organisation and what support you need. We'll respond within 48 hours.</p>
     <div id="modal-form" style="display: block;">
       <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" id="f-first" placeholder="e.g. Kofi"></div>
-        <div class="form-group"><label>Surname</label><input type="text" id="f-last" placeholder="e.g. Mensah"></div>
+        <div class="form-group"><label>First Name</label><input type="text" id="f-first" placeholder="e.g. Kofi"><span class="field-error-msg">First name is required.</span></div>
+        <div class="form-group"><label>Surname</label><input type="text" id="f-last" placeholder="e.g. Mensah"><span class="field-error-msg">Surname is required.</span></div>
       </div>
-      <div class="form-group"><label>Email Address</label><input type="email" id="f-email" placeholder="your@email.com"></div>
-      <div class="form-group"><label>Telephone / WhatsApp</label><input type="tel" id="f-tel" placeholder="+233 XXX XXX XXX"></div>
-      <div class="form-group"><label>How Can We Help?</label><textarea id="f-msg" placeholder="Briefly describe your organisation and the support you're looking for..."></textarea></div>
+      <div class="form-group"><label>Email Address</label><input type="email" id="f-email" placeholder="your@email.com"><span class="field-error-msg" id="f-email-error">Enter a valid email address.</span></div>
+      <div class="form-group"><label>Telephone / WhatsApp</label><input type="tel" id="f-tel" placeholder="+233 XXX XXX XXX"><span class="field-error-msg">Telephone is required.</span></div>
+      <div class="form-group"><label>Purpose of Proposal</label>
+        <select id="f-purpose">
+          <option value="">Select the purpose of your request</option>
+          <option value="Agri-Performance Diagnostic">The Agri-Performance Diagnostic™</option>
+          <option value="Funding-Ready Pack">The Funding-Ready Pack™</option>
+          <option value="Market Access Booster">The Market Access Booster™</option>
+          <option value="General / Not Sure Yet">General Enquiry / Not Sure Yet</option>
+        </select>
+        <span class="field-error-msg">Please select the purpose of your proposal.</span>
+      </div>
+      <div class="form-group"><label>Current Scale of Organisation</label>
+        <select id="f-scale">
+          <option value="">Select your current scale</option>
+          <option value="Startup / Early-stage">Startup / Early-stage</option>
+          <option value="Small (1-10 staff)">Small (1–10 staff)</option>
+          <option value="Medium (11-50 staff)">Medium (11–50 staff)</option>
+          <option value="Large / Institutional (50+ staff)">Large / Institutional (50+ staff)</option>
+        </select>
+        <span class="field-error-msg">Please select your current scale.</span>
+      </div>
+      <div class="form-group"><label>Expected Timeline</label>
+        <select id="f-timeline">
+          <option value="">Select your expected timeline</option>
+          <option value="Immediately / ASAP">Immediately / ASAP</option>
+          <option value="Within 1 month">Within 1 month</option>
+          <option value="1-3 months">1–3 months</option>
+          <option value="3-6 months">3–6 months</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+        <span class="field-error-msg">Please select your expected timeline.</span>
+      </div>
+      <div class="form-group"><label>How Can We Help?</label><textarea id="f-msg" placeholder="Briefly describe your organisation and the support you're looking for..."></textarea><span class="field-error-msg">Please tell us how we can help.</span></div>
       <button class="form-submit" onclick="submitForm()">Send Proposal Request</button>
     </div>
     <div class="form-success" id="form-success" style="display: none;">
@@ -293,7 +330,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <a href="#services">Services</a>
     <a href="#intro">About</a>
     <a href="#methodology">Our Approach</a>
-    <a href="#about">Meet the Founder</a>
+    <a href="javascript:void(0)" onclick="openFounderModal();closeMenu()">Meet the Founder</a>
     <a href="#contact">Contact</a>
     <button class="nav-proposal" onclick="openModal();closeMenu()">Request a Proposal</button>
     <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta" target="_blank"><i class="ti ti-phone-call"></i> Book a Call</a>
@@ -306,7 +343,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   <div class="hero-overlay"></div>
   <div class="hero-badge">Agribusiness Consulting · Accra / Northern Ghana &amp; West Africa</div>
   <h1>Turning Agriculture into <span>Structured, Profitable</span> Business Systems</h1>
-  <p>We solve the business, operations, reporting, and strategy problems that prevent agribusinesses from growing — across Ghana and West Africa.</p>
+  <p>We turn agriculture ambition into fundable, structured business systems — for organisations ready to grow past the founder-dependent stage.</p>
   <div class="hero-btns">
     <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="btn-gold" target="_blank"><i class="ti ti-phone-call"></i> Book a Discovery Call</a>
     <a href="#services" class="btn-ghost"><i class="ti ti-briefcase"></i> View Our Services</a>
@@ -319,7 +356,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   <div class="intro-inner">
     <div class="section-label">The Problem We Solve</div>
     <h2 class="section-title" style="font-size:1.65rem">Ghana's agriculture sector generates billions — yet most agribusinesses operate without formal systems.</h2>
-    <p style="margin-top:14px;font-size:15px">The result is poor performance visibility, weak funding readiness, and stunted growth. AgriValue Advisory Consult exists to close that gap. We do not provide farming advice. We solve the business and operational problems behind the growth ceiling.</p>
+    <p style="margin-top:14px;font-size:15px">AgriValue Advisory Consult turns Ghanaian and West African agribusinesses into structured, fundable, and scalable operations — replacing informal systems with the performance dashboards, funding-ready proposals, and market access strategy organisations need to grow beyond the founder-dependent stage. We do not provide farming advice. We solve the business and operational problems behind the growth ceiling.</p>
     <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
       <a href="#services" class="btn-green"><i class="ti ti-arrow-right"></i> See Our Services</a>
       <button onclick="openModal()" class="btn-outline-green"><i class="ti ti-file-text"></i> Request a Proposal</button>
@@ -468,12 +505,14 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
 <!-- BIGGER PICTURE -->
 <section class="bigger-section">
   <div class="bigger-eyebrow">The Bigger Picture</div>
-  <p class="bigger-pull">Agriculture is the backbone of Ghana's economy and the livelihood of <span>over 50% of its population.</span> Its transformation will not happen through farming advice alone.</p>
-  <p class="bigger-body">It will happen when the business systems, reporting infrastructure, market access capabilities, and funding readiness of agriculture organisations reach international standards. That is what AgriValue Advisory Consult is building — one client at a time, starting in Tamale, scaling across Ghana, and eventually serving the agriculture sectors of West Africa's most productive economies.</p>
+  <p class="bigger-pull">Agriculture is the backbone of Ghana's economy and the livelihood of <span>nearly 40% of its workforce.</span> Its transformation will not happen through farming advice alone.</p>
+  <p class="bigger-body">It will happen when the business systems, reporting infrastructure, market access capabilities, and funding readiness of agriculture organisations reach international standards. That is what AgriValue Advisory Consult is building — one client at a time, rooted in Tamale, Northern Ghana, with a national base in Accra, and scaling across Ghana toward the agriculture sectors of West Africa's most productive economies.</p>
 </section>
 
-<!-- FOUNDER -->
-<section class="founder-section" id="about">
+<!-- FOUNDER (opens from nav dropdown, not shown inline on homepage) -->
+<div class="modal-overlay" id="founder-modal">
+<section class="founder-section modal-box founder-modal-box" id="about">
+  <button class="modal-close" onclick="closeFounderModal()">✕</button>
   <div class="section-label centered">Leadership</div>
   <h2 class="section-title centered">Meet the Founder</h2>
   <div class="founder-inner">
@@ -509,6 +548,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     </div>
   </div>
 </section>
+</div>
 
 <!-- CONTACT / CTA -->
 <section class="cta-section" id="contact">
@@ -580,19 +620,59 @@ function closeModal(){
   document.body.style.overflow='';
   document.getElementById('modal-form').style.display='block';
   document.getElementById('form-success').style.display='none';
+  document.querySelectorAll('#modal-form .form-group').forEach(g=>g.classList.remove('field-error'));
 }
 document.getElementById('proposal-modal').addEventListener('click',function(e){
   if(e.target===this)closeModal();
+});
+function openFounderModal(){
+  document.getElementById('founder-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeFounderModal(){
+  document.getElementById('founder-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('founder-modal').addEventListener('click',function(e){
+  if(e.target===this)closeFounderModal();
+});
+const EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function setFieldError(id,hasError){
+  const field=document.getElementById(id);
+  const group=field.closest('.form-group');
+  group.classList.toggle('field-error',hasError);
+}
+document.querySelectorAll('#modal-form input,#modal-form select,#modal-form textarea').forEach(function(el){
+  el.addEventListener('input',function(){setFieldError(el.id,false);});
+  el.addEventListener('change',function(){setFieldError(el.id,false);});
 });
 function submitForm(){
   const first=document.getElementById('f-first').value.trim();
   const last=document.getElementById('f-last').value.trim();
   const email=document.getElementById('f-email').value.trim();
   const tel=document.getElementById('f-tel').value.trim();
+  const purpose=document.getElementById('f-purpose').value;
+  const scale=document.getElementById('f-scale').value;
+  const timeline=document.getElementById('f-timeline').value;
   const msg=document.getElementById('f-msg').value.trim();
-  if(!first||!last||!email||!tel||!msg){alert('Please fill in all fields.');return;}
+
+  const emailValid=EMAIL_RE.test(email);
+
+  setFieldError('f-first',!first);
+  setFieldError('f-last',!last);
+  setFieldError('f-email',!email||!emailValid);
+  setFieldError('f-tel',!tel);
+  setFieldError('f-purpose',!purpose);
+  setFieldError('f-scale',!scale);
+  setFieldError('f-timeline',!timeline);
+  setFieldError('f-msg',!msg);
+
+  if(!first||!last||!email||!emailValid||!tel||!purpose||!scale||!timeline||!msg){
+    return;
+  }
+
   const subject=`Proposal Request from ${first} ${last}`;
-  const body=`Name: ${first} ${last}\nEmail: ${email}\nTelephone: ${tel}\n\nMessage:\n${msg}`;
+  const body=`Name: ${first} ${last}\nEmail: ${email}\nTelephone: ${tel}\nPurpose of Proposal: ${purpose}\nCurrent Scale: ${scale}\nExpected Timeline: ${timeline}\n\nMessage:\n${msg}`;
   window.location.href=`mailto:agrivalueadvisory@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   document.getElementById('modal-form').style.display='none';
   document.getElementById('form-success').style.display='block';
