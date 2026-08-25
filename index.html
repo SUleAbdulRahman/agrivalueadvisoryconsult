@@ -36,6 +36,12 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom-color:transpare
 .nav-links a:hover{color:var(--green)}
 .nav-cta{background:var(--green);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:background .2s;white-space:nowrap;flex-shrink:0}
 .nav-cta:hover{background:var(--green-dark)!important}
+/* WhatsApp icon button (replaces the nav "Book a Call" label) */
+.nav-wa{background:#25D366;color:#fff!important;width:42px;height:42px;padding:0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;transition:transform .2s,background .2s;box-shadow:0 2px 10px rgba(37,211,102,.35)}
+.nav-wa:hover{background:#1da851;transform:scale(1.07)}
+.nav-wa i{line-height:1}
+.mobile-menu .nav-wa{width:100%;height:46px;border-radius:var(--radius);gap:9px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700}
+.mobile-menu .nav-wa i{font-size:20px}
 .nav-proposal{border:1.5px solid var(--green);color:#000!important;padding:8px 18px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:.2s;cursor:pointer;background:transparent}
 .nav-proposal:hover{background:var(--green-tint)!important}
 .nav-menu-btn{display:flex;background:transparent;border:1.5px solid var(--border);border-radius:var(--radius);width:40px;height:40px;align-items:center;justify-content:center;font-size:20px;color:var(--green);cursor:pointer}
@@ -177,6 +183,61 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom-color:transpare
 .vm-card-green p{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--white);line-height:1.7}
 .vm-card-white p{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1rem;color:var(--green);line-height:1.7}
 
+/* ── CORE VALUES (ERPIC) ── */
+.values-section{background:var(--white);padding:88px 6%}
+.values-acronym{text-align:center;margin-top:28px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--grey)}
+.values-acronym strong{color:var(--green);letter-spacing:.24em;font-size:22px;display:block;margin-bottom:8px}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:44px;max-width:1080px;margin-left:auto;margin-right:auto}
+.value-card{background:var(--cream);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:var(--radius-lg);padding:28px 26px}
+.value-letter{font-family:'Montserrat',sans-serif;font-size:34px;font-weight:800;line-height:1;color:var(--gold);margin-bottom:10px}
+.value-card h4{font-family:'Montserrat',sans-serif;font-size:17px;font-weight:700;color:var(--green);margin-bottom:8px}
+.value-card p{font-size:15px;color:var(--charcoal);line-height:1.65}
+
+/* ── NAV DROPDOWN (RESOURCES) ── */
+.nav-group{position:relative}
+.nav-group-btn{display:flex;align-items:center;gap:6px;width:100%;background:transparent;border:none;font-family:'Open Sans',sans-serif;font-size:14px;font-weight:600;color:var(--charcoal);cursor:pointer;padding:0}
+.nav-group-btn i{font-size:15px;transition:transform .2s}
+.nav-group.open .nav-group-btn i.ti-chevron-down{transform:rotate(180deg)}
+.nav-sub{display:none;flex-direction:column;gap:12px;padding:12px 0 4px 16px;border-left:2px solid var(--gold-tint);margin-top:12px}
+.nav-group.open .nav-sub{display:flex}
+.nav-sub a{font-size:13.5px!important;font-weight:600;color:var(--grey)!important;display:flex;align-items:center;gap:8px}
+.nav-sub a:hover{color:var(--green)!important}
+.nav-partner{border:1.5px solid var(--gold);color:var(--gold)!important;padding:8px 18px;border-radius:var(--radius);font-size:13px;font-weight:700;transition:.2s;text-align:center}
+.nav-partner:hover{background:var(--gold);color:var(--charcoal)!important}
+
+/* ── PARTNER WITH US ── */
+.partner-section{background:var(--green);padding:88px 6%;color:var(--white)}
+.partner-section .section-label{color:var(--gold)}
+.partner-section h2{font-family:'Montserrat',sans-serif;font-size:clamp(24px,3.2vw,34px);color:var(--white);text-align:center}
+.partner-lead{max-width:760px;margin:16px auto 0;text-align:center;color:#dbe7e0;font-size:16px}
+.partner-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;max-width:1080px;margin:44px auto 0}
+.partner-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:26px 24px}
+.partner-card i{font-size:26px;color:var(--gold);display:block;margin-bottom:12px}
+.partner-card h4{font-family:'Montserrat',sans-serif;font-size:16px;color:var(--white);margin-bottom:8px}
+.partner-card p{font-size:14.5px;color:#cfdcd5;line-height:1.7}
+.partner-cta{text-align:center;margin-top:40px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ── AVAC LANGUAGE (GLOSSARY) ── */
+.lang-section{background:var(--cream);padding:88px 6%}
+.lang-filters{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;max-width:900px;margin:36px auto 0}
+.lang-filter{font-family:'Montserrat',sans-serif;font-size:12.5px;font-weight:700;color:var(--green);background:var(--white);border:1px solid var(--border);border-radius:999px;padding:9px 18px;cursor:pointer;transition:.2s}
+.lang-filter:hover{border-color:var(--green)}
+.lang-filter.active{background:var(--green);border-color:var(--green);color:var(--white)}
+.lang-groups{max-width:1080px;margin:44px auto 0}
+.lang-group{margin-bottom:40px}
+.lang-group-head{display:flex;align-items:center;gap:12px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:22px}
+.lang-group-head i{font-size:22px;color:var(--gold)}
+.lang-group-head h3{font-family:'Montserrat',sans-serif;font-size:18px;color:var(--green)}
+.lang-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.lang-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px}
+.lang-item dt{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--charcoal);margin-bottom:6px;display:flex;align-items:baseline;gap:9px}
+.lang-item dt .lang-letter{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.08em}
+.lang-item dd{font-size:14.5px;color:var(--grey);line-height:1.7}
+.lang-item.coined{border-left:4px solid var(--gold);background:var(--gold-tint)}
+.lang-item.coined dd{color:var(--charcoal)}
+.lang-tag{display:inline-block;font-family:'Montserrat',sans-serif;font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--charcoal);background:var(--gold);border-radius:999px;padding:3px 9px;margin-left:auto}
+.lang-empty{text-align:center;color:var(--grey);font-size:15px;display:none}
+
 /* ── BIGGER PICTURE ── */
 .bigger-section{background:var(--charcoal);padding:88px 6%;text-align:center}
 .bigger-eyebrow{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
@@ -228,6 +289,12 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
 .footer-brand{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--white);font-size:14px}
 .footer-brand span{color:var(--gold)}
 .footer-note{font-size:12px;color:var(--grey)}
+.footer-address{display:flex;gap:40px;flex-wrap:wrap;width:100%;border-top:1px solid rgba(255,255,255,.12);margin-top:8px;padding-top:20px}
+.footer-address .addr-label{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.footer-address .addr-text{font-size:13px;color:#cfcfcf;line-height:1.6}
+.footer-legal{display:flex;gap:10px;align-items:center;flex-wrap:wrap;width:100%;justify-content:center;border-top:1px solid rgba(255,255,255,.12);margin-top:4px;padding-top:20px}
+.footer-legal-btn{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:#d8d8d8;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 18px;display:inline-flex;align-items:center;gap:7px;transition:all .2s}
+.footer-legal-btn:hover{color:var(--charcoal);background:var(--gold);border-color:var(--gold)}
 
 /* ── DOWNLOAD BTN ── */
 
@@ -322,18 +389,31 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <a href="#services">Services</a>
     <a href="#intro">About</a>
     <a href="#methodology">Our Approach</a>
+    <a href="#values">Our Values</a>
+    <a href="insights/index.html">Resources</a>
+    <a href="#partner">Partner With Us</a>
     <a href="#contact">Contact</a>
     <button class="nav-proposal" onclick="openModal()">Request a Proposal</button>
-    <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta" target="_blank"><i class="ti ti-phone-call"></i> Book a Call</a>
+    <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta nav-wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <a href="#services">Services</a>
     <a href="#intro">About</a>
     <a href="#methodology">Our Approach</a>
     <a href="javascript:void(0)" onclick="openFounderModal();closeMenu()">Meet the Founder</a>
+    <a href="#values" onclick="closeMenu()">Our Values</a>
+    <a href="#language" onclick="closeMenu()">AVAC Language</a>
+    <div class="nav-group" id="resources-group">
+      <button class="nav-group-btn" onclick="toggleResources()" aria-expanded="false"><i class="ti ti-books"></i> Resources <i class="ti ti-chevron-down"></i></button>
+      <div class="nav-sub">
+        <a href="insights/index.html"><i class="ti ti-article"></i> Blog</a>
+        <a href="newsletters.html"><i class="ti ti-mail-opened"></i> Newsletters</a>
+      </div>
+    </div>
     <a href="#contact">Contact</a>
+    <a href="#partner" class="nav-partner" onclick="closeMenu()"><i class="ti ti-handshake"></i> Partner With Us</a>
     <button class="nav-proposal" onclick="openModal();closeMenu()">Request a Proposal</button>
-    <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta" target="_blank"><i class="ti ti-phone-call"></i> Book a Call</a>
+    <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta nav-wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><i class="ti ti-brand-whatsapp"></i> WhatsApp Us</a>
   </div>
 </nav>
 
@@ -502,11 +582,179 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   </div>
 </section>
 
+<!-- CORE VALUES -->
+<section class="values-section" id="values">
+  <div class="section-label centered">What We Stand For</div>
+  <h2 class="section-title centered">Our Core Values</h2>
+  <p class="values-acronym"><strong>ERPIC</strong>Excellence · Reliability · Positivity · Integrity · Consistency</p>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-letter">E</div><h4>Excellence</h4><p>We deliver evidence-based recommendations, not opinions.</p></div>
+    <div class="value-card"><div class="value-letter">R</div><h4>Reliability</h4><p>We meet commitments and communicate proactively.</p></div>
+    <div class="value-card"><div class="value-letter">P</div><h4>Positivity</h4><p>We focus on solutions, even when diagnosing difficult problems.</p></div>
+    <div class="value-card"><div class="value-letter">I</div><h4>Integrity</h4><p>We tell clients what they need to hear, not what they want to hear.</p></div>
+    <div class="value-card"><div class="value-letter">C</div><h4>Consistency</h4><p>We use repeatable systems that produce dependable outcomes.</p></div>
+  </div>
+</section>
+
 <!-- BIGGER PICTURE -->
 <section class="bigger-section">
   <div class="bigger-eyebrow">The Bigger Picture</div>
   <p class="bigger-pull">Agriculture is the backbone of Ghana's economy and the livelihood of <span>nearly 40% of its workforce.</span> Its transformation will not happen through farming advice alone.</p>
   <p class="bigger-body">It will happen when the business systems, reporting infrastructure, market access capabilities, and funding readiness of agriculture organisations reach international standards. That is what AgriValue Advisory Consult is building — one client at a time, rooted in Tamale, Northern Ghana, with a national base in Accra, and scaling across Ghana toward the agriculture sectors of West Africa's most productive economies.</p>
+</section>
+
+<!-- PARTNER WITH US -->
+<section class="partner-section" id="partner">
+  <div class="section-label centered">Collaboration</div>
+  <h2>Partner With Us</h2>
+  <p class="partner-lead">Transforming agriculture organisations is not a one-firm job. We work alongside institutions, programmes, funders, and specialists who share our conviction that agribusiness in Ghana and West Africa grows when its systems grow.</p>
+  <div class="partner-grid">
+    <div class="partner-card"><i class="ti ti-building-bank"></i><h4>Funders &amp; Development Programmes</h4><p>Donors, grant facilities, and development programmes seeking a delivery partner to make portfolio organisations structured, reportable, and funding-ready.</p></div>
+    <div class="partner-card"><i class="ti ti-briefcase"></i><h4>Financial Institutions</h4><p>Banks, MFIs, and investors who need borrower-side readiness — clean records, credible projections, and documentation that survives due diligence.</p></div>
+    <div class="partner-card"><i class="ti ti-users-group"></i><h4>Cooperatives &amp; Aggregators</h4><p>Farmer-based organisations and aggregation networks looking for a long-term systems partner rather than a one-off consultant.</p></div>
+    <div class="partner-card"><i class="ti ti-school"></i><h4>Training &amp; Academic Institutions</h4><p>Universities, agricultural colleges, and training providers who want practical agribusiness management content delivered by practitioners.</p></div>
+    <div class="partner-card"><i class="ti ti-plug-connected"></i><h4>Technology &amp; Data Providers</h4><p>Platform and tooling partners whose systems we can implement, configure, and embed into client reporting and operations.</p></div>
+    <div class="partner-card"><i class="ti ti-user-star"></i><h4>Associate Consultants</h4><p>Experienced professionals in operations, finance, market access, and data who want to deliver structured engagements under the AVAC framework.</p></div>
+  </div>
+  <div class="partner-cta">
+    <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20partnership%20with%20AgriValue%20Advisory%20Consult." class="btn-gold" target="_blank"><i class="ti ti-handshake"></i> Start a Partnership Conversation</a>
+    <a href="mailto:agrivalueadvisory@gmail.com?subject=Partnership%20Enquiry%20-%20AgriValue%20Advisory%20Consult" class="btn-ghost"><i class="ti ti-mail"></i> Email a Proposal</a>
+  </div>
+</section>
+
+<!-- AVAC LANGUAGE (GLOSSARY) -->
+<section class="lang-section" id="language">
+  <div class="section-label centered">The AVAC Language</div>
+  <h2 class="section-title centered">A–Z of the Words We Work In</h2>
+  <p class="section-sub centered">Consulting fails when client and consultant use the same words to mean different things. This is the vocabulary we use in diagnostics, reports, and proposals — defined plainly, grouped by the part of the business each term belongs to.</p>
+
+  <div class="lang-filters" id="lang-filters">
+    <button class="lang-filter active" data-group="all">All</button>
+    <button class="lang-filter" data-group="frameworks">Frameworks</button>
+    <button class="lang-filter" data-group="operations">Operations</button>
+    <button class="lang-filter" data-group="finance">Finance</button>
+    <button class="lang-filter" data-group="systems">Systems</button>
+    <button class="lang-filter" data-group="agribusiness">Agribusiness</button>
+    <button class="lang-filter" data-group="people">People &amp; Training</button>
+    <button class="lang-filter" data-group="data">Data &amp; KPIs</button>
+  </div>
+
+  <div class="lang-groups">
+
+    <!-- FRAMEWORKS -->
+    <div class="lang-group" data-group="frameworks">
+      <div class="lang-group-head"><i class="ti ti-layers-intersect"></i><h3>Frameworks</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">A</span> Agri-Performance Diagnostic™</dt><dd>Our structured assessment of an agriculture organisation's operations, finance, systems, people, and reporting — producing a ranked list of what is actually limiting growth.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> DADIT Approach</dt><dd>The AVAC engagement sequence — Diagnose, Analyse, Design, Implement, Track — that keeps every project moving from evidence to installed system rather than stopping at a report.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">E</span> ERPIC</dt><dd>The AVAC core values — Excellence, Reliability, Positivity, Integrity, Consistency — expressed as observable behaviours rather than slogans.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">F</span> Funding-Ready Pack™</dt><dd>The complete documentation set a lender, investor, or grant programme expects: business case, financial model, operational evidence, and supporting records.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">G</span> Growth Ceiling</dt><dd>The point at which an organisation stops growing not because demand ran out, but because its systems, structure, or leadership capacity cannot carry more volume.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">M</span> Market Access Booster™</dt><dd>Our engagement for organisations with product but no reliable route to buyers — covering positioning, buyer targeting, pricing, and supply commitment readiness.</dd></div>
+        <div class="lang-item coined"><dt><span class="lang-letter">P</span> Prosperity Suffocation <span class="lang-tag">AVAC Term</span></dt><dd>The condition in which a genuinely viable agribusiness is starved of its own success — where informal systems, missing records, founder dependency, and unstructured operations quietly choke off the funding, buyers, and scale the business has already earned. The opportunity is real; the structure to breathe it in is not. Removing prosperity suffocation is the core of every AVAC engagement.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> Scope of Work</dt><dd>The written definition of what an engagement will and will not cover, its deliverables, timeline, and the responsibilities of each side.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">T</span> Theory of Change</dt><dd>The logic connecting an intervention to its intended outcome — what we do, what changes because of it, and how we will know.</dd></div>
+      </dl>
+    </div>
+
+    <!-- OPERATIONS -->
+    <div class="lang-group" data-group="operations">
+      <div class="lang-group-head"><i class="ti ti-settings-2"></i><h3>Operations</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Bottleneck</dt><dd>The single step in a workflow that limits total output. Improving anything other than the bottleneck does not increase throughput.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Capacity Utilisation</dt><dd>How much of your available processing, storage, or labour capacity is actually being used — the gap between what you own and what you run.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">F</span> Founder Dependency</dt><dd>The state where operations stall whenever one person is unavailable, because decisions, relationships, and knowledge sit in their head rather than in a system.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">L</span> Lead Time</dt><dd>The elapsed time from order or harvest to delivery. Long and unpredictable lead times are the most common reason buyers walk away.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">P</span> Post-Harvest Loss</dt><dd>Produce lost between harvest and sale through handling, storage, transport, or delay — a direct and usually measurable deduction from revenue.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> SOP (Standard Operating Procedure)</dt><dd>A written, repeatable instruction for a recurring task, so quality does not depend on who happens to be on duty.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">T</span> Throughput</dt><dd>The volume an operation actually completes per period — the real measure of capacity, as distinct from what the equipment is rated for.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">T</span> Traceability</dt><dd>The ability to follow a product back through handling, storage, and source. Increasingly a precondition for formal and export buyers.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">W</span> Workflow Redesign</dt><dd>Rebuilding how work moves through the organisation — sequence, handovers, and approvals — to remove waste and delay.</dd></div>
+      </dl>
+    </div>
+
+    <!-- FINANCE -->
+    <div class="lang-group" data-group="finance">
+      <div class="lang-group-head"><i class="ti ti-coins"></i><h3>Finance</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Bankability</dt><dd>Whether a business can realistically be financed — driven by records, cash flow evidence, collateral or guarantees, and management credibility.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Break-Even Point</dt><dd>The volume or revenue at which income covers total cost. Many agribusinesses have never calculated theirs.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Burn Rate</dt><dd>The pace at which cash leaves the business before revenue replaces it — what determines how long you have to fix a problem.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Cash Flow Cycle</dt><dd>The time between paying for inputs and receiving payment for output. In agriculture this gap is seasonal, long, and the usual cause of avoidable distress.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Concessional Finance</dt><dd>Funding offered below commercial terms — lower interest, longer tenor, or partial grant — typically from development or blended-finance sources.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Due Diligence</dt><dd>The verification a funder or buyer performs before committing. It tests whether your documents, records, and claims agree with each other.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">G</span> Gross Margin</dt><dd>Revenue less direct cost of production, before overheads — the first honest test of whether a product line is worth running.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">U</span> Unit Economics</dt><dd>The profit or loss on a single unit — one tonne, one bag, one hectare, one customer. If it fails at unit level, scale multiplies the loss.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">W</span> Working Capital</dt><dd>The cash tied up in running the business day to day — inputs, stock, and receivables. The most commonly requested and most commonly mismanaged form of agricultural finance.</dd></div>
+      </dl>
+    </div>
+
+    <!-- SYSTEMS -->
+    <div class="lang-group" data-group="systems">
+      <div class="lang-group-head"><i class="ti ti-sitemap"></i><h3>Systems</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">A</span> Audit Trail</dt><dd>The record showing who did what, when, and on whose authority — the difference between a claim and evidence.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Business Process</dt><dd>A defined chain of activities that turns an input into an output for a customer or internal user.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Digitisation</dt><dd>Moving records from paper and memory into structured digital form so they can be searched, reported, and verified.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Document Control</dt><dd>Knowing which version of a record, contract, or template is the current one — and making sure everyone works from it.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">I</span> Internal Controls</dt><dd>The checks and separations of duty that protect cash, stock, and data from error and misuse.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> Segregation of Duties</dt><dd>Ensuring the person who authorises a transaction is not the same person who executes and records it.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> Single Source of Truth</dt><dd>One agreed record that everyone works from, ending the situation where three departments hold three different numbers.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> System Adoption</dt><dd>Whether people actually use the system installed. A system that is bypassed has not been implemented, only purchased.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">W</span> Workflow Automation</dt><dd>Letting a tool handle routine routing, reminders, and calculations so staff time goes to judgement rather than transcription.</dd></div>
+      </dl>
+    </div>
+
+    <!-- AGRIBUSINESS -->
+    <div class="lang-group" data-group="agribusiness">
+      <div class="lang-group-head"><i class="ti ti-plant-2"></i><h3>Agribusiness</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">A</span> Aggregation</dt><dd>Consolidating output from many smallholders into volumes large and consistent enough for a formal buyer to contract.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Contract Farming</dt><dd>An agreement fixing volume, quality, and price with producers ahead of the season, shifting risk and requiring records on both sides.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">F</span> FBO (Farmer-Based Organisation)</dt><dd>A cooperative, association, or producer group organised for collective input access, aggregation, or marketing.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">I</span> Input Supply</dt><dd>The seed, fertiliser, agrochemical, and equipment chain feeding production — its timing and financing often determine the season's outcome.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">M</span> Market Linkage</dt><dd>A working, repeatable connection between producer and buyer — not an introduction, but an arrangement that survives more than one season.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">O</span> Offtake Agreement</dt><dd>A commitment from a buyer to purchase agreed volumes. One of the strongest assets an agribusiness can present to a funder.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> Smallholder</dt><dd>A farmer operating at small scale, typically under two hectares — the base of most West African agricultural value chains.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">V</span> Value Addition</dt><dd>Processing, grading, packaging, or certifying raw output to capture more of the final price rather than selling at farm gate.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">V</span> Value Chain</dt><dd>Every step from input supply through production, aggregation, processing, and distribution to the end market — and the margin at each.</dd></div>
+      </dl>
+    </div>
+
+    <!-- PEOPLE & TRAINING -->
+    <div class="lang-group" data-group="people">
+      <div class="lang-group-head"><i class="ti ti-users"></i><h3>People &amp; Training</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Capacity Building</dt><dd>Raising an organisation's ability to run itself — skills, roles, and systems together, not training sessions alone.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">C</span> Competency Gap</dt><dd>The measured distance between the skills a role requires and the skills the person in it currently has.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Delegation Structure</dt><dd>The documented decisions each role may take without escalation — the practical cure for founder dependency.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">H</span> Handover Documentation</dt><dd>The record that lets a role change hands without operational knowledge walking out of the door.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">K</span> Knowledge Transfer</dt><dd>Deliberately moving know-how from individuals into documents, training, and systems the organisation keeps.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">O</span> Org Structure</dt><dd>Who reports to whom and who owns what outcome — clarified on paper before it can be fixed in practice.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">P</span> Performance Management</dt><dd>Setting expectations, measuring against them, and acting on the result — consistently, not annually.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">R</span> Role Clarity</dt><dd>Each person knowing precisely what they are accountable for. Its absence is the quiet cause of most missed deadlines.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">S</span> Succession Readiness</dt><dd>Whether the organisation can continue operating if a key person leaves tomorrow.</dd></div>
+      </dl>
+    </div>
+
+    <!-- DATA & KPIs -->
+    <div class="lang-group" data-group="data">
+      <div class="lang-group-head"><i class="ti ti-chart-bar"></i><h3>Data &amp; KPIs</h3></div>
+      <dl class="lang-list">
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Baseline</dt><dd>The measured starting position, captured before any intervention, so improvement can be proved rather than claimed.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">B</span> Benchmark</dt><dd>A comparison point — internal history or sector standard — that tells you whether a number is good.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Dashboard</dt><dd>A single view of the few numbers management must see to run the business, refreshed on a fixed rhythm.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">D</span> Data Hygiene</dt><dd>The discipline of keeping records complete, consistent, and current. Without it, every report built on top is fiction.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">K</span> KPI (Key Performance Indicator)</dt><dd>A small number of measures that genuinely indicate performance — chosen because they drive decisions, not because they are easy to collect.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">L</span> Lagging Indicator</dt><dd>A measure that confirms what already happened, such as revenue or annual yield.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">L</span> Leading Indicator</dt><dd>A measure that predicts what is coming, such as input delivery timing or order pipeline — where management can still intervene.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">M</span> M&amp;E (Monitoring &amp; Evaluation)</dt><dd>The structured tracking of activity and outcome that donors and programmes require as a condition of funding.</dd></div>
+        <div class="lang-item"><dt><span class="lang-letter">R</span> Reporting Cadence</dt><dd>The fixed rhythm — weekly, monthly, quarterly — at which numbers are produced and reviewed. Irregular reporting is the same as none.</dd></div>
+      </dl>
+    </div>
+
+  </div>
+  <p class="lang-empty" id="lang-empty">No terms in this group yet.</p>
 </section>
 
 <!-- FOUNDER (opens from nav dropdown, not shown inline on homepage) -->
@@ -577,6 +825,24 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
 <footer>
   <div class="footer-brand">AgriValue <span>Advisory Consult</span></div>
   <div class="footer-note">© 2026 AgriValue Advisory Consult · Headquartered in Accra, Ghana | Operations: Tamale, Northern Ghana</div>
+  <div class="footer-address">
+    <address style="font-style:normal">
+      <div class="addr-label">Headquarters</div>
+      <div class="addr-text">Accra, Ghana</div>
+    </address>
+    <address style="font-style:normal">
+      <div class="addr-label">Operations Office</div>
+      <div class="addr-text">53 Bamvum, Tamale<br>Northern Region, Ghana</div>
+    </address>
+  </div>
+  <div class="footer-legal">
+    <a href="insights/index.html" class="footer-legal-btn"><i class="ti ti-article"></i> Blog</a>
+    <a href="newsletters.html" class="footer-legal-btn"><i class="ti ti-mail-opened"></i> Newsletters</a>
+    <a href="#partner" class="footer-legal-btn"><i class="ti ti-handshake"></i> Partner With Us</a>
+    <a href="#language" class="footer-legal-btn"><i class="ti ti-language"></i> AVAC Language</a>
+    <a href="privacy-policy.html" class="footer-legal-btn"><i class="ti ti-shield-lock"></i> Privacy Policy</a>
+    <a href="terms-of-use.html" class="footer-legal-btn"><i class="ti ti-file-text"></i> Terms of Use</a>
+  </div>
 </footer>
 
 <script>
@@ -601,6 +867,29 @@ function closeMenu(){
   document.getElementById('menu-toggle').setAttribute('aria-expanded','false');
 }
 document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',closeMenu));
+
+// Resources dropdown
+function toggleResources(){
+  const g=document.getElementById('resources-group');
+  const open=g.classList.toggle('open');
+  g.querySelector('.nav-group-btn').setAttribute('aria-expanded',open);
+}
+
+// AVAC Language filters
+document.querySelectorAll('.lang-filter').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const group=btn.dataset.group;
+    document.querySelectorAll('.lang-filter').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    let shown=0;
+    document.querySelectorAll('.lang-group').forEach(sec=>{
+      const match=(group==='all'||sec.dataset.group===group);
+      sec.style.display=match?'':'none';
+      if(match)shown++;
+    });
+    document.getElementById('lang-empty').style.display=shown?'none':'block';
+  });
+});
 
 // Smooth scroll offset for sticky nav
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
