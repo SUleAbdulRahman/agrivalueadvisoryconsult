@@ -61,6 +61,10 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom-color:transpare
 .modal-box p{font-size:13.5px;color:var(--grey);margin-bottom:24px}
 .founder-modal-box{max-width:900px;max-height:88vh;overflow-y:auto}
 .founder-section.founder-modal-box{padding:44px 6% 40px}
+.wide-modal-box{max-width:1100px;max-height:88vh;overflow-y:auto}
+.partner-section.wide-modal-box,.lang-section.wide-modal-box{padding:44px 6% 40px}
+.partner-section .modal-close{color:rgba(255,255,255,.85)}
+.partner-section .modal-close:hover{color:var(--gold)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
 .form-group label{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--charcoal);letter-spacing:.05em;text-transform:uppercase}
@@ -391,7 +395,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <a href="#methodology">Our Approach</a>
     <a href="#values">Our Values</a>
     <a href="insights/index.html">Resources</a>
-    <a href="#partner">Partner With Us</a>
+    <a href="javascript:void(0)" onclick="openPartnerModal()">Partner With Us</a>
     <a href="#contact">Contact</a>
     <button class="nav-proposal" onclick="openModal()">Request a Proposal</button>
     <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta nav-wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
@@ -402,7 +406,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <a href="#methodology">Our Approach</a>
     <a href="javascript:void(0)" onclick="openFounderModal();closeMenu()">Meet the Founder</a>
     <a href="#values" onclick="closeMenu()">Our Values</a>
-    <a href="#language" onclick="closeMenu()">AVAC Language</a>
+    <a href="javascript:void(0)" onclick="openLanguageModal();closeMenu()">AVAC Language</a>
     <div class="nav-group" id="resources-group">
       <button class="nav-group-btn" onclick="toggleResources()" aria-expanded="false"><i class="ti ti-books"></i> Resources <i class="ti ti-chevron-down"></i></button>
       <div class="nav-sub">
@@ -411,7 +415,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
       </div>
     </div>
     <a href="#contact">Contact</a>
-    <a href="#partner" class="nav-partner" onclick="closeMenu()"><i class="ti ti-handshake"></i> Partner With Us</a>
+    <a href="javascript:void(0)" class="nav-partner" onclick="openPartnerModal();closeMenu()"><i class="ti ti-handshake"></i> Partner With Us</a>
     <button class="nav-proposal" onclick="openModal();closeMenu()">Request a Proposal</button>
     <a href="https://wa.me/233542773711?text=Hello%2C%20I%20would%20like%20to%20book%20a%20discovery%20call%20with%20AgriValue%20Advisory%20Consult." class="nav-cta nav-wa" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><i class="ti ti-brand-whatsapp"></i> WhatsApp Us</a>
   </div>
@@ -603,8 +607,10 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   <p class="bigger-body">It will happen when the business systems, reporting infrastructure, market access capabilities, and funding readiness of agriculture organisations reach international standards. That is what AgriValue Advisory Consult is building — one client at a time, rooted in Tamale, Northern Ghana, with a national base in Accra, and scaling across Ghana toward the agriculture sectors of West Africa's most productive economies.</p>
 </section>
 
-<!-- PARTNER WITH US -->
-<section class="partner-section" id="partner">
+<!-- PARTNER WITH US (opens from nav, not shown inline on homepage) -->
+<div class="modal-overlay" id="partner-modal">
+<section class="partner-section modal-box wide-modal-box" id="partner">
+  <button class="modal-close" onclick="closePartnerModal()">✕</button>
   <div class="section-label centered">Collaboration</div>
   <h2>Partner With Us</h2>
   <p class="partner-lead">Transforming agriculture organisations is not a one-firm job. We work alongside institutions, programmes, funders, and specialists who share our conviction that agribusiness in Ghana and West Africa grows when its systems grow.</p>
@@ -621,9 +627,12 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
     <a href="mailto:agrivalueadvisory@gmail.com?subject=Partnership%20Enquiry%20-%20AgriValue%20Advisory%20Consult" class="btn-ghost"><i class="ti ti-mail"></i> Email a Proposal</a>
   </div>
 </section>
+</div>
 
-<!-- AVAC LANGUAGE (GLOSSARY) -->
-<section class="lang-section" id="language">
+<!-- AVAC LANGUAGE (GLOSSARY) (opens from nav, not shown inline on homepage) -->
+<div class="modal-overlay" id="language-modal">
+<section class="lang-section modal-box wide-modal-box" id="language">
+  <button class="modal-close" onclick="closeLanguageModal()">✕</button>
   <div class="section-label centered">The AVAC Language</div>
   <h2 class="section-title centered">A–Z of the Words We Work In</h2>
   <p class="section-sub centered">Consulting fails when client and consultant use the same words to mean different things. This is the vocabulary we use in diagnostics, reports, and proposals — defined plainly, grouped by the part of the business each term belongs to.</p>
@@ -756,6 +765,7 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   </div>
   <p class="lang-empty" id="lang-empty">No terms in this group yet.</p>
 </section>
+</div>
 
 <!-- FOUNDER (opens from nav dropdown, not shown inline on homepage) -->
 <div class="modal-overlay" id="founder-modal">
@@ -838,8 +848,6 @@ footer{background:var(--charcoal);padding:32px 6%;display:flex;justify-content:s
   <div class="footer-legal">
     <a href="insights/index.html" class="footer-legal-btn"><i class="ti ti-article"></i> Blog</a>
     <a href="newsletters.html" class="footer-legal-btn"><i class="ti ti-mail-opened"></i> Newsletters</a>
-    <a href="#partner" class="footer-legal-btn"><i class="ti ti-handshake"></i> Partner With Us</a>
-    <a href="#language" class="footer-legal-btn"><i class="ti ti-language"></i> AVAC Language</a>
     <a href="privacy-policy.html" class="footer-legal-btn"><i class="ti ti-shield-lock"></i> Privacy Policy</a>
     <a href="terms-of-use.html" class="footer-legal-btn"><i class="ti ti-file-text"></i> Terms of Use</a>
   </div>
@@ -925,6 +933,28 @@ function closeFounderModal(){
 document.getElementById('founder-modal').addEventListener('click',function(e){
   if(e.target===this)closeFounderModal();
 });
+function openPartnerModal(){
+  document.getElementById('partner-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closePartnerModal(){
+  document.getElementById('partner-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('partner-modal').addEventListener('click',function(e){
+  if(e.target===this)closePartnerModal();
+});
+function openLanguageModal(){
+  document.getElementById('language-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLanguageModal(){
+  document.getElementById('language-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('language-modal').addEventListener('click',function(e){
+  if(e.target===this)closeLanguageModal();
+});
 const EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function setFieldError(id,hasError){
   const field=document.getElementById(id);
@@ -983,4 +1013,5 @@ document.getElementById('photo-upload').addEventListener('change',function(e){
 </script>
 
 
+<script src="/ai-assistant/widget.js" defer></script>
 </body></html>
